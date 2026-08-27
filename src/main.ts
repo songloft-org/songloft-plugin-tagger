@@ -127,6 +127,4 @@ router.get('/api/stats', async () => {
 // HTTP 入口
 // ============================================================================
 
-export function __dispatchHTTP(req: { method: string; path: string; headers: Record<string, string>; body: string }) {
-  return router.dispatch(req);
-}
+globalThis.onHTTPRequest = async (req: HTTPRequest) => router.handle(req);

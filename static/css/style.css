@@ -1,0 +1,216 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--md-surface, #fafafa);
+  color: var(--md-on-surface, #1c1b1f);
+  padding: 16px;
+  padding-top: calc(16px + var(--sl-safe-top, 0px));
+  padding-bottom: calc(16px + var(--sl-safe-bottom, 0px));
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--md-surface-container-low, #fff);
+  border-radius: var(--md-radius-md, 12px);
+  border: 1px solid var(--md-outline-variant, #e0e0e0);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--md-on-surface, #1c1b1f);
+}
+
+.card-title .material-symbols-outlined {
+  font-size: 20px;
+  color: var(--md-primary, #6750a4);
+}
+
+.card-body {
+  display: block;
+}
+
+/* 统计卡片 */
+.stats-card {
+  background: var(--md-primary-container, #eaddff);
+}
+
+.stats-row {
+  display: flex;
+  gap: 32px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--md-on-primary-container, #21005d);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--md-on-primary-container, #21005d);
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+/* 表单字段 */
+.field {
+  margin-bottom: 16px;
+}
+
+.field-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--md-on-surface-variant, #49454f);
+}
+
+.field-hint {
+  display: block;
+  font-size: 12px;
+  color: var(--md-on-surface-variant, #49454f);
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid var(--md-outline, #79747e);
+  border-radius: var(--md-radius-sm, 8px);
+  background: var(--md-surface, #fff);
+  color: var(--md-on-surface, #1c1b1f);
+  appearance: auto;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  border: 1px solid var(--md-outline, #79747e);
+  border-radius: var(--md-radius-sm, 8px);
+  background: var(--md-surface, #fff);
+  color: var(--md-on-surface, #1c1b1f);
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.textarea:focus,
+.select:focus {
+  outline: 2px solid var(--md-primary, #6750a4);
+  outline-offset: -1px;
+  border-color: transparent;
+}
+
+/* 按钮 */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--md-radius-full, 20px);
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-filled {
+  background: var(--md-primary, #6750a4);
+  color: var(--md-on-primary, #fff);
+}
+
+.btn-outlined {
+  background: transparent;
+  color: var(--md-primary, #6750a4);
+  border: 1px solid var(--md-outline, #79747e);
+}
+
+/* 结果框 */
+.result-box {
+  padding: 12px;
+  border-radius: var(--md-radius-sm, 8px);
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.result-box.hidden {
+  display: none;
+}
+
+.result-box.success {
+  background: var(--md-success-container, #d4edda);
+  color: var(--md-on-success-container, #155724);
+}
+
+.result-box.error {
+  background: var(--md-error-container, #f8d7da);
+  color: var(--md-on-error-container, #721c24);
+}
+
+.result-box.info {
+  background: var(--md-surface-container, #f3f3f3);
+  color: var(--md-on-surface, #1c1b1f);
+}
+
+/* 预览列表 */
+.preview-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+}
+
+.preview-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--md-outline-variant, #e0e0e0);
+  font-size: 13px;
+}
+
+.preview-list li:last-child {
+  border-bottom: none;
+}
+
+.preview-list .tag-name {
+  font-weight: 500;
+}
+
+.preview-list .tag-count {
+  color: var(--md-on-surface-variant, #49454f);
+}

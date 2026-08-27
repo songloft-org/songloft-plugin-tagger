@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>标签导入</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 统计卡片 -->
+    <div class="card stats-card">
+      <div class="card-title">
+        <span class="material-symbols-outlined">analytics</span>
+        当前状态
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-value" id="stat-tags">-</span>
+          <span class="stat-label">标签总数</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="stat-bindings">-</span>
+          <span class="stat-label">绑定关系</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 按元数据生成标签 -->
+    <div class="card">
+      <div class="card-title">
+        <span class="material-symbols-outlined">label</span>
+        按元数据批量生成标签
+      </div>
+      <div class="card-body">
+        <div class="field">
+          <label class="field-label">选择字段</label>
+          <select id="field-select" class="select">
+            <option value="genre">流派 (genre)</option>
+            <option value="artist">歌手 (artist)</option>
+            <option value="album">专辑 (album)</option>
+            <option value="language">语种 (language)</option>
+            <option value="style">风格 (style)</option>
+          </select>
+          <span class="field-hint">genre 字段支持多值分隔（; ， /）自动拆分</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-outlined" id="btn-preview">预览</button>
+          <button class="btn btn-filled" id="btn-generate">执行</button>
+        </div>
+        <div id="generate-result" class="result-box hidden"></div>
+      </div>
+    </div>
+
+    <!-- JSON 导入 -->
+    <div class="card">
+      <div class="card-title">
+        <span class="material-symbols-outlined">upload_file</span>
+        从 JSON 导入
+      </div>
+      <div class="card-body">
+        <div class="field">
+          <label class="field-label">粘贴 JSON 数据</label>
+          <textarea id="import-input" class="textarea" rows="6" placeholder='[{"title":"晴天","artist":"周杰伦","tags":["怀旧","华语经典"]}]'></textarea>
+          <span class="field-hint">格式: [{"title", "artist", "tags": [...]}]</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-filled" id="btn-import">导入</button>
+        </div>
+        <div id="import-result" class="result-box hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="static/js/app.js"></script>
+</body>
+</html>

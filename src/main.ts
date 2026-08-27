@@ -26,7 +26,9 @@ router.post('/api/generate-by-field', async (req) => {
     const values = field === 'genre'
       ? value.split(/[;；,，/]/).map(v => v.trim()).filter(Boolean)
       : [value.trim()];
-    for (const v of values) {
+    for (let v of values) {
+      v = v.substring(0, 50);
+      if (!v) continue;
       const ids = fieldMap.get(v) || [];
       ids.push(song.id);
       fieldMap.set(v, ids);
@@ -93,7 +95,7 @@ router.post('/api/import', async (req) => {
     matched++;
 
     for (const tagName of item.tags) {
-      const name = tagName.trim();
+      const name = tagName.trim().substring(0, 50);
       if (!name) continue;
 
       const existing = await songloft.tags.list({ keyword: name, limit: 1 });

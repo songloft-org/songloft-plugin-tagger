@@ -1,0 +1,15 @@
+{
+  "name": "songloft-plugin-tagger",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "songloft-plugin build",
+    "dev": "songloft-plugin dev",
+    "validate": "songloft-plugin validate"
+  },
+  "devDependencies": {
+    "@songloft/plugin-builder": "^2.13.3",
+    "@songloft/plugin-sdk": "^2.13.3",
+    "typescript": "^5.0.0"
+  }
+}

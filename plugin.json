@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/songloft-org/plugin-toolchain/main/schemas/plugin.schema.json",
+  "name": "标签导入",
+  "version": "0.1.0",
+  "description": "批量标签导入：按元数据生成标签、从 CSV/JSON 导入歌曲-标签映射",
+  "author": "Songloft Team",
+  "homepage": "https://github.com/songloft-org/songloft-plugin-tagger",
+  "license": "Apache-2.0",
+  "icon": "icon.svg",
+  "entryPath": "tagger",
+  "main": "main.js",
+  "minHostVersion": "2.7.0",
+  "permissions": [
+    "storage",
+    "songs.read",
+    "tags.*"
+  ],
+  "download_url": "https://github.com/songloft-org/songloft-plugin-tagger/releases/download/v0.1.0/tagger.jsplugin.zip",
+  "updateUrl": "https://raw.githubusercontent.com/songloft-org/songloft-plugin-tagger/main/plugin.json",
+  "entryHash": "",
+  "zipHash": ""
+}

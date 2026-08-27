@@ -1,0 +1,38 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+overrides:
+  '@songloft/plugin-builder': link:../../plugin-toolchain/packages/plugin-builder
+
+importers:
+
+  .:
+    devDependencies:
+      '@songloft/plugin-builder':
+        specifier: link:../../plugin-toolchain/packages/plugin-builder
+        version: link:../../plugin-toolchain/packages/plugin-builder
+      '@songloft/plugin-sdk':
+        specifier: ^2.13.3
+        version: 2.13.11
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+
+packages:
+
+  '@songloft/plugin-sdk@2.13.11':
+    resolution: {integrity: sha512-/38KTq3b4vxrGYvVMSLcaO7ZHLz4KVoSx68/Fnkl9Mh/SocVlpxLKBQDGDteLZHjIRCY+NrZJ4/VTH13NbbqRg==}
+
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+snapshots:
+
+  '@songloft/plugin-sdk@2.13.11': {}
+
+  typescript@5.9.3: {}

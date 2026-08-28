@@ -115,6 +115,45 @@ router.post('/api/import', async (req) => {
 });
 
 // ============================================================================
+// 歌单转标签
+// ============================================================================
+
+router.get('/api/playlists', async () => {
+  const playlists = await songloft.playlists.list();
+  return jsonResponse({ playlists: playlists.map(p => ({ id: p.id, name: p.name, song_count: p.song_count })) });
+});
+
+router.post('/api/from-playlist', async (req) => {
+  const body: { playlistId: number } = JSON.parse(req.body);
+  const playlist = await songloft.playlists.getById(body.playlistId);
+  if (!playlist) {
+    return jsonResponse({ error: 'playlist not found' }, 404);
+  }
+
+  const songs = await songloft.playlists.getSongs(body.playlistId, { limit: 100000 });
+  const songIds = songs.map(s => s.id);
+  if (songIds.length === 0) {
+    return jsonResponse({ error: 'playlist is empty' }, 400);
+  }
+
+  const name = playlist.name.trim().substring(0, 50);
+  if (!name) {
+    return jsonResponse({ error: 'playlist name is empty' }, 400);
+  }
+
+  const existing = await songloft.tags.list({ keyword: name, limit: 1 });
+  let tag;
+  if (existing.length > 0 && existing[0].name.toLowerCase() === name.toLowerCase()) {
+    tag = existing[0];
+  } else {
+    tag = await songloft.tags.create({ name });
+  }
+
+  const result = await songloft.tags.bindSongs(tag.id, songIds);
+  return jsonResponse({ tag, bound: result.bound });
+});
+
+// ============================================================================
 // 查看当前状态
 // ============================================================================
 

@@ -128,6 +128,57 @@ btnImport.addEventListener('click', async () => {
 });
 
 // ============================================================================
+// 歌单转标签
+// ============================================================================
+
+const playlistSelect = document.getElementById('playlist-select');
+const btnConvert = document.getElementById('btn-convert');
+const convertResult = document.getElementById('convert-result');
+
+async function loadPlaylists() {
+  try {
+    const data = await api.get('/api/playlists');
+    if (data && data.playlists && data.playlists.length > 0) {
+      playlistSelect.innerHTML = data.playlists
+        .map(p => `<option value="${p.id}">${escHtml(p.name)} (${p.song_count} 首)</option>`)
+        .join('');
+    } else {
+      playlistSelect.innerHTML = '<option value="">暂无歌单</option>';
+    }
+  } catch (e) {
+    playlistSelect.innerHTML = '<option value="">加载失败</option>';
+  }
+}
+
+btnConvert.addEventListener('click', async () => {
+  const playlistId = parseInt(playlistSelect.value, 10);
+  if (!playlistId) {
+    showResult(convertResult, 'error', '请选择一个歌单');
+    return;
+  }
+  const name = playlistSelect.selectedOptions[0].textContent.replace(/\s*\(\d+ 首\)$/, '');
+  if (!confirm(`确定将歌单「${name}」转为标签？`)) return;
+
+  btnConvert.disabled = true;
+  btnConvert.textContent = '转换中...';
+  convertResult.className = 'result-box hidden';
+
+  try {
+    const data = await api.post('/api/from-playlist', { playlistId });
+    if (data) {
+      showResult(convertResult, 'success',
+        `✅ 已创建标签「${escHtml(data.tag?.name || name)}」，关联 ${data.bound} 首歌曲`);
+      loadStats();
+    }
+  } catch (e) {
+    showResult(convertResult, 'error', '转换失败: ' + (e.message || e));
+  } finally {
+    btnConvert.disabled = false;
+    btnConvert.textContent = '转换';
+  }
+});
+
+// ============================================================================
 // Util
 // ============================================================================
 
@@ -139,3 +190,4 @@ function escHtml(s) {
 
 // 初始化
 loadStats();
+loadPlaylists();

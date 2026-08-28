@@ -70,6 +70,27 @@
         <div id="import-result" class="result-box hidden"></div>
       </div>
     </div>
+
+    <!-- 歌单转标签 -->
+    <div class="card">
+      <div class="card-title">
+        <span class="material-symbols-outlined">playlist_add_check</span>
+        歌单转标签
+      </div>
+      <div class="card-body">
+        <div class="field">
+          <label class="field-label">选择歌单</label>
+          <select id="playlist-select" class="select">
+            <option value="">加载中...</option>
+          </select>
+          <span class="field-hint">将歌单内所有歌曲关联到同名标签（标签不存在时自动创建）</span>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-filled" id="btn-convert">转换</button>
+        </div>
+        <div id="convert-result" class="result-box hidden"></div>
+      </div>
+    </div>
   </div>
 
   <script src="static/js/app.js"></script>

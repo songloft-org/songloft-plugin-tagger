@@ -1,6 +1,6 @@
 # songloft-plugin-tagger
 
-Songloft 标签导入插件，用于批量创建和绑定标签。
+Songloft 标签管理插件，用于批量创建和绑定标签。
 
 ## 功能
 
@@ -32,7 +32,20 @@ POST /api/import
 }
 ```
 
-### 3. 查看统计
+### 3. 歌单转标签
+
+将歌单内所有歌曲关联到同名标签（标签不存在时自动创建）。
+
+```
+GET /api/playlists
+// => { "playlists": [{"id": 1, "name": "...", "song_count": 10}, ...] }
+
+POST /api/from-playlist
+{ "playlistId": 3 }
+// => { "tag": {...}, "bound": 15 }
+```
+
+### 4. 查看统计
 
 ```
 GET /api/stats
@@ -43,6 +56,7 @@ GET /api/stats
 
 - `storage` — 存储配置
 - `songs.read` — 读取歌曲列表
+- `playlists.read` — 读取歌单列表
 - `tags.*` — 读写标签
 
 ## 开发

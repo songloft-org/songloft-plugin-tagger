@@ -2,3 +2,13 @@ packages:
   - "."
 allowBuilds:
   esbuild: true
+minimumReleaseAgeExclude:
+  - '@songloft/plugin-builder@2.14.1'
+  - '@songloft/plugin-sdk@2.14.1'
+  - '@songloft/jsc-darwin-arm64@2.14.0'
+  - '@songloft/jsc-darwin-x64@2.14.0'
+  - '@songloft/jsc-linux-arm64@2.14.0'
+  - '@songloft/jsc-linux-x64@2.14.0'
+  - '@songloft/jsc-win32-arm64@2.14.0'
+  - '@songloft/jsc-win32-x64@2.14.0'
+  - '@songloft/jsc@2.14.1'

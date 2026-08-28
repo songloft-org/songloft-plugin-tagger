@@ -9,11 +9,11 @@ importers:
   .:
     devDependencies:
       '@songloft/plugin-builder':
-        specifier: ^2.13.3
-        version: 2.13.11
+        specifier: ^2.14.1
+        version: 2.14.1
       '@songloft/plugin-sdk':
-        specifier: ^2.13.3
-        version: 2.13.11
+        specifier: ^2.14.1
+        version: 2.14.1
       typescript:
         specifier: ^5.0.0
         version: 5.9.3
@@ -180,33 +180,33 @@ packages:
     resolution: {integrity: sha512-AokJm4tuBHillT+FpMtxQ60n8ObyXBatq7jD2/JA9dxbDDokKQm8KMht5ibGzLVU9IJDIKK4TPKgMHEYMn3lMg==}
     engines: {node: '>=18'}
 
-  '@songloft/jsc-darwin-arm64@2.13.11':
-    resolution: {integrity: sha512-TWce94m/cmlk7ZaUKSjeDJeQtEyZfOM1X8hJLNOMeaImRn9xaQiAATea7nToAa29qynQ7p/h3wy/jcJr++if/A==}
+  '@songloft/jsc-darwin-arm64@2.14.0':
+    resolution: {integrity: sha512-NUm5vWiSgOKUbLJkq710dvnE7pKcvFPlovZyr65oIyXTOghaVAWZ9xyxcSt3Q11x6Rv4M40LRAyA4fWyzUzZVg==}
 
-  '@songloft/jsc-darwin-x64@2.13.11':
-    resolution: {integrity: sha512-HFudvJkxf2n40BvLvHM3l6XhsO24zVhvxfIqtArtdty5Ey+O5bVhXmddXJ8RsqugyA/xuzKlul/6NMWTGnSHWg==}
+  '@songloft/jsc-darwin-x64@2.14.0':
+    resolution: {integrity: sha512-IdWwVOvyVmI3iW6YxmRQKesTs/4xFaUU0dqFEhcZL0sNY9LvVRQJB8ps0aeBozIBrDUwUAiozZ5ZiblSmxkLxA==}
 
-  '@songloft/jsc-linux-arm64@2.13.11':
-    resolution: {integrity: sha512-Lr7ie026TOsY5llyE8i3M1k/mB7fWkOCIBhwmL4pJ+1FYbgACqnpFIkrQUFdVEMaakjNP+7V41v9gN+lDRg7kA==}
+  '@songloft/jsc-linux-arm64@2.14.0':
+    resolution: {integrity: sha512-LAutGJDAf4UyFmAcwcvLpmpVQMwtBzNRrJRIYWvDHZyS1gamRK5oRrAJU/jqHi9t6bcEXP/zoIOVA2npygh7OA==}
 
-  '@songloft/jsc-linux-x64@2.13.11':
-    resolution: {integrity: sha512-vOBxP7I3LnpSvTCiQ5LEdLeP2CeV+TFVAAdte8mITljcOoZ54gRWGIAT9LVKMthikCTdeJ4TK3/epqN1X4d/JA==}
+  '@songloft/jsc-linux-x64@2.14.0':
+    resolution: {integrity: sha512-7ZQ6gBzhl9pUkDy4kLdiVUYUif5W3SgSS4MbcJmTxMdnCCf1fivx3kWirKinpL2RE9YYR+8Bkf4oiEdXnXtgJg==}
 
-  '@songloft/jsc-win32-arm64@2.13.11':
-    resolution: {integrity: sha512-uSOHJ7gbRa3WT64Uj6nTNCm13hInKCgNLLiRSyamKKGrxQz+MKsgVoRnyCdf1sUUHfTjJ7nQM810L8bKE/FBrA==}
+  '@songloft/jsc-win32-arm64@2.14.0':
+    resolution: {integrity: sha512-Uk8EEWrRSDRLpbILMqZ0pr5uUBEyJD7W2i2qQCmJa1c8TU0jIdWW1QfnvN5dLoziba+v7Fk6frhiDm5ZZkSRTw==}
 
-  '@songloft/jsc-win32-x64@2.13.11':
-    resolution: {integrity: sha512-AlGjfcgrR5JamUCSS2ueEZiD3cMuvVp80rrFt2moy517cmVHXUq4WaXGMdpBLndyHEmhMhvkaTQQr3hQUFhP/g==}
+  '@songloft/jsc-win32-x64@2.14.0':
+    resolution: {integrity: sha512-EVDAhp86nb2rJ9cUWd+9i2/yrqOCdSee0YuNFRyNA75fm2X3POS/QUpGPY6clj6xtrZbRE7R4KPcQE0n3H/HZg==}
 
-  '@songloft/jsc@2.13.11':
-    resolution: {integrity: sha512-ph3BM9zaNzWUJT5MoQe0BCrampgtbSI+l8TEXOe5Ubknt6QkE00fLOvDxpgl4WbeEkdCOTT1EfrAzaNw9LeIvw==}
+  '@songloft/jsc@2.14.1':
+    resolution: {integrity: sha512-iU7yI8yVnxhYlTJRkGgWtJfynh3r7pK/c9Mbs61xPIGuIQqvbkSDkI6MRiEJ0D6d6dSIPPMQk4W7LDdNe2n8jQ==}
 
-  '@songloft/plugin-builder@2.13.11':
-    resolution: {integrity: sha512-/HrjLFGhWdIQgaj/a0vd2+X3OZidRErDc2jQn8LXJNNCzI7erh3WmNIZ546U4wn2NJRonPSyG21wnNrYveK1Hg==}
+  '@songloft/plugin-builder@2.14.1':
+    resolution: {integrity: sha512-2og1ve0pjxBAHwU8QL4yZ6gEFpEVaFDzvC0GzUNnMPk2Rhaj0k0KqQvZXrZMH6W/qTWb1uYUq8JdgGY5Jv9jMQ==}
     hasBin: true
 
-  '@songloft/plugin-sdk@2.13.11':
-    resolution: {integrity: sha512-/38KTq3b4vxrGYvVMSLcaO7ZHLz4KVoSx68/Fnkl9Mh/SocVlpxLKBQDGDteLZHjIRCY+NrZJ4/VTH13NbbqRg==}
+  '@songloft/plugin-sdk@2.14.1':
+    resolution: {integrity: sha512-R9Fgr3RxSZyWHvEDsueVYT40c1tzSW/zMKu3JHh8pf5vAWAEgav/IrgToSPkpf9C7aYBf6jQx7IiGgIg7E5F7g==}
 
   balanced-match@4.0.4:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
@@ -408,41 +408,41 @@ snapshots:
 
   '@isaacs/cliui@9.0.0': {}
 
-  '@songloft/jsc-darwin-arm64@2.13.11':
+  '@songloft/jsc-darwin-arm64@2.14.0':
     optional: true
 
-  '@songloft/jsc-darwin-x64@2.13.11':
+  '@songloft/jsc-darwin-x64@2.14.0':
     optional: true
 
-  '@songloft/jsc-linux-arm64@2.13.11':
+  '@songloft/jsc-linux-arm64@2.14.0':
     optional: true
 
-  '@songloft/jsc-linux-x64@2.13.11':
+  '@songloft/jsc-linux-x64@2.14.0':
     optional: true
 
-  '@songloft/jsc-win32-arm64@2.13.11':
+  '@songloft/jsc-win32-arm64@2.14.0':
     optional: true
 
-  '@songloft/jsc-win32-x64@2.13.11':
+  '@songloft/jsc-win32-x64@2.14.0':
     optional: true
 
-  '@songloft/jsc@2.13.11':
+  '@songloft/jsc@2.14.1':
     optionalDependencies:
-      '@songloft/jsc-darwin-arm64': 2.13.11
-      '@songloft/jsc-darwin-x64': 2.13.11
-      '@songloft/jsc-linux-arm64': 2.13.11
-      '@songloft/jsc-linux-x64': 2.13.11
-      '@songloft/jsc-win32-arm64': 2.13.11
-      '@songloft/jsc-win32-x64': 2.13.11
+      '@songloft/jsc-darwin-arm64': 2.14.0
+      '@songloft/jsc-darwin-x64': 2.14.0
+      '@songloft/jsc-linux-arm64': 2.14.0
+      '@songloft/jsc-linux-x64': 2.14.0
+      '@songloft/jsc-win32-arm64': 2.14.0
+      '@songloft/jsc-win32-x64': 2.14.0
 
-  '@songloft/plugin-builder@2.13.11':
+  '@songloft/plugin-builder@2.14.1':
     dependencies:
-      '@songloft/jsc': 2.13.11
+      '@songloft/jsc': 2.14.1
       esbuild: 0.25.12
       glob: 11.1.0
       jszip: 3.10.1
 
-  '@songloft/plugin-sdk@2.13.11': {}
+  '@songloft/plugin-sdk@2.14.1': {}
 
   balanced-match@4.0.4: {}
 

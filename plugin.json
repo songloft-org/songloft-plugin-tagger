@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/songloft-org/plugin-toolchain/main/schemas/plugin.schema.json",
   "name": "标签导入",
-  "version": "2026.8.28",
+  "version": "2026.8.29",
   "description": "批量标签管理：按元数据生成标签、从 CSV/JSON 导入歌曲-标签映射、歌单转标签",
   "author": "Songloft Team",
   "homepage": "https://github.com/songloft-org/songloft-plugin-tagger",
@@ -16,7 +16,7 @@
     "playlists.read",
     "tags.*"
   ],
-  "download_url": "https://github.com/songloft-org/songloft-plugin-tagger/releases/download/v2026.8.28/tagger.jsplugin.zip",
+  "download_url": "https://github.com/songloft-org/songloft-plugin-tagger/releases/download/v2026.8.29/tagger.jsplugin.zip",
   "updateUrl": "https://raw.githubusercontent.com/songloft-org/songloft-plugin-tagger/main/plugin.json",
   "entryHash": "",
   "zipHash": ""
